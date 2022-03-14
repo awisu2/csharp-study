@@ -1,5 +1,7 @@
 # csharp-study
 
+- [about .NET](./docs/aboutDotnet.md)
+
 ## insatll and run
 
 - [Visual Studio: ソフトウェア開発者とチーム向けの IDE およびコード エディター](https://visualstudio.microsoft.com/ja/)
