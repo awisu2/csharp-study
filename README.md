@@ -14,6 +14,7 @@
 ## gui
 
 - [uno platform](./https://platform.uno/)
+  - [getting start](./docs/unoPlatform.md)
 
 ## Words
 
