@@ -14,8 +14,11 @@
   - Mono: Open source. for **.Net Framework** with  multi platform。割といい感じに動くとのこと
     - Xamarin: for clos platform of mobile with Mono.
     - Xamarin Studio: IDE
-- .NET core (ex: 3.x), .NET 5 (5~): **.Net core** for multi platform
+- .NET 5 (5~), .NET core (ex: 3.x) : **.Net core** series for multi platform
   - UWP, ASP.Net core
   - クロスプラットフォームで利用する際は、こちらか、.Net Standardを選択すると良い
+
+### 派生系
+
 - Mono: .NET Framework > Mono
 - Xamarin: .NET Framework > Mono > Xamarin
