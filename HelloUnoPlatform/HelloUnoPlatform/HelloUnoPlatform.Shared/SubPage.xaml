@@ -1,5 +1,5 @@
 ﻿<Page
-    x:Class="HelloUnoPlatform.MainPage"
+    x:Class="HelloUnoPlatform.SubPage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:HelloUnoPlatform"
@@ -8,17 +8,7 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-
     <Grid>
-        <StackPanel>
-            <TextBlock Text="{x:Bind slider.Value, Mode=OneWay}" />
-            <Slider x:Name="slider" ></Slider>
-        </StackPanel>
 
-        <Button HorizontalAlignment="Left" Margin="50,40,0,0" VerticalAlignment="Center" Click="ButtonClick">
-            <Button.Content>
-                <TextBlock Text="next window"></TextBlock>
-            </Button.Content>
-        </Button>
     </Grid>
 </Page>
