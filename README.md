@@ -2,6 +2,7 @@
 
 ## basic
 
+- [basic things](./docs/basicthings.md): So i am beginner
 - [basic codes](./HelloVisualStudioSolution/README.md)
 
 ## docs
@@ -13,8 +14,7 @@
 
 ## gui
 
-- [uno platform](./https://platform.uno/)
-  - [getting start](./docs/unoPlatform.md)
+- [uno platform](./docs/unoPlatform.md)
 
 ## Words
 

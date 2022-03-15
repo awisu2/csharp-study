@@ -1,10 +1,16 @@
 # uno platform
 
+[Uno Platform](https://platform.uno/)
+
+## NOTE
+
+- run with Xamarin(Mono, .NET Framework) and UWP
+- [If XAML Intellisense isn't working on Visual Studio 2022 and windows](https://platform.uno/docs/articles/get-started-vs-2022.html#make-sure-xaml-intellisense-is-enabled)
+
 ## getting start
 
-- before develop setup: [Get Started \- Select your development environment](https://platform.uno/docs/articles/get-started.html)
+- setup before start: [Get Started \- Select your development environment](https://platform.uno/docs/articles/get-started.html)
 - getting start: [Create a Single Page App with Uno Platform](https://platform.uno/docs/articles/getting-started-tutorial-1.html)
-- [If XAML Intellisense isn't working on Visual Studio 2022 and windows](https://platform.uno/docs/articles/get-started-vs-2022.html#make-sure-xaml-intellisense-is-enabled)
 
 ### setup
 
