@@ -23,6 +23,9 @@
                 <Button Content="change" Click="ChangeHello" />
             </StackPanel>
 
+            <Button Content="go to SubPage" Click="GotoSub" />
+            
+            
             <TextBlock Text="{x:Bind slider.Value, Mode=OneWay}" />
             <Slider x:Name="slider" ></Slider>
             <TextBlock Text="{x:Bind MainCounter.Num, Mode=OneWay}" />

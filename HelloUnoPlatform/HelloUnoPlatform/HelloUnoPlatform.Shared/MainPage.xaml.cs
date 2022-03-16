@@ -52,6 +52,11 @@ namespace HelloUnoPlatform
             hello.Hello = next;
         }
 
+        private void GotoSub(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(SubPage));
+        }
+
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             base.OnNavigatedTo(e);

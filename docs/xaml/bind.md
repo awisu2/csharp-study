@@ -1,32 +1,28 @@
-# xmal
+# bind
 
-- [Windows アプリのレイアウト パネル \- Windows apps \| Microsoft Docs](https://docs.microsoft.com/ja-jp/windows/apps/design/layout/layout-panels)
-- [データ バインディングの概要 \- UWP applications \| Microsoft Docs](https://docs.microsoft.com/ja-jp/windows/uwp/data-binding/data-binding-quickstart)
-- [での XAML 名前空間 Xamarin\.Forms \- Xamarin \| Microsoft Docs](https://docs.microsoft.com/ja-jp/xamarin/xamarin-forms/xaml/namespaces)
+[データ バインディングの概要 \- UWP applications \| Microsoft Docs](https://docs.microsoft.com/ja-jp/windows/uwp/data-binding/data-binding-quickstart)
 
 ## NOTE
 
 - x:Bind と Binding の違い: ざっくりとだが、xaml 外の値を利用する場合は `x:Bind`、 xmal 内のデータを利用する場合は `Binding` と考えるとわかりやすい
+  - Mode の指定ができ、OneWay または TwoWay の場合、値の変更を受け付けるようになる
+    - デフォルトは `OneTime` らしく、初回取得でしか走らない
+- 値の変更通知: `IFNotifyPropertyChanged`の実装が一番の基礎的な方法みたい
+  - `ObservableCollection`を利用した配列(Collection?)の変更通知実装もある
+    - [項目のコレクションへのバインド](https://docs.microsoft.com/ja-jp/windows/uwp/data-binding/data-binding-quickstart#binding-to-a-collection-of-items)
+- [] `DependencyProperty`: プロパティを色々する？まだ良くわかってない
+  - [Create a Single Page App with Uno Platform](https://platform.uno/docs/articles/getting-started-tutorial-2.html)
+  - [DependencyProperty クラス \(System\.Windows\) \| Microsoft Docs](https://docs.microsoft.com/ja-jp/dotnet/api/system.windows.dependencyproperty?view=windowsdesktop-6.0)
 
-## xmlns について
+## 変更通知を楽にするライブラリ
 
-[での XAML 名前空間 Xamarin\.Forms \- Xamarin \| Microsoft Docs](https://docs.microsoft.com/ja-jp/xamarin/xamarin-forms/xaml/namespaces)
+- [] どれがいいのか調査
+- [mvvm\-helpers](https://github.com/jamesmontemagno/mvvm-helpers)
+- [runceel/ReactiveProperty](https://github.com/runceel/ReactiveProperty)
 
-xmal を生成したときに `<Page>` とともに設定されている `xmlns` について
+## samples
 
-- 連携して動作するクラスの指定: `x:Class`
-  - 正しくは、XAML で定義されているクラスの名前空間とクラス名を指定
-- 自前のクラスを設定する `xmlns:{name}="using:{namespace}"` or `xmlns:{name}="clr-namespace:{namespace}"` どちらも同じ
-  - ex: `xmlns:models="using:Helloworld.Models"` => `models.YourClass` のようにアクセスができるようになる
-
-## x:Bind, Binding samples
-
-[データ バインディングの概要 \- UWP applications \| Microsoft Docs](https://docs.microsoft.com/ja-jp/windows/uwp/data-binding/data-binding-quickstart)
-
-- `ObservableCollection<T>` 特定の方を List 形式で管理し、更新通知を行うようにする
-- `DependencyProperty`:
-
-## direct use
+### direct use
 
 but this usage first time showing only. can't update.
 
@@ -43,7 +39,7 @@ public sealed partial class MainPage : Page
 <TextBlock Text="{x:Bind hello}" />
 ```
 
-## with update (IFNotifyPropertyChanged)
+### with update (IFNotifyPropertyChanged)
 
 [INotifyPropertyChanged インターフェイス \(System\.ComponentModel\) \| Microsoft Docs](https://docs.microsoft.com/ja-jp/dotnet/api/system.componentmodel.inotifypropertychanged?view=net-6.0)
 
@@ -117,7 +113,6 @@ namespace HelloUnoPlatform
         }
     }
 }
-
 ```
 
 ```xml
@@ -147,7 +142,9 @@ namespace HelloUnoPlatform
 
 ## with update (ObservableCollection)
 
-[項目のコレクションへのバインド](https://docs.microsoft.com/ja-jp/windows/uwp/data-binding/data-binding-quickstart#binding-to-a-collection-of-items)
+公式サンプル
+
+- [項目のコレクションへのバインド](https://docs.microsoft.com/ja-jp/windows/uwp/data-binding/data-binding-quickstart#binding-to-a-collection-of-items)
 
 ```cs
 namespace HelloUnoPlatform.Models
@@ -173,14 +170,6 @@ namespace HelloUnoPlatform.Models
     }
 }
 ```
-
-## 直接利用式
-
-```xml
-<TextBlock Text="{x:Bind hello}" />
-```
-
-### 事前宣言式
 
 ```xml
     <Page.Resources>
@@ -226,7 +215,3 @@ namespace HelloUnoPlatform.Models
         set => SetValue(CounterProperty, value);
     }
 ```
-
-## view samples
-
-### ListView

@@ -15,6 +15,7 @@
 ## gui
 
 - [uno platform](./docs/unoPlatform.md)
+- [xaml](./docs/xaml/xaml.md): xaml with uwp and c#
 
 ## Words
 
