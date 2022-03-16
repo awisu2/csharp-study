@@ -14,7 +14,9 @@
     <_Globbed_Compile Remove="BlankPage1.xaml.cs" />
     <_Globbed_Compile Remove="CounterObject.cs" />
     <_Globbed_Compile Remove="Models\Counter.cs" />
+    <_Globbed_Compile Remove="Models\HelloINotifyPropertyChanged.cs" />
     <_Globbed_Compile Remove="Models\NumData.cs" />
+    <_Globbed_Compile Remove="Models\Recording.cs" />
     <_Globbed_Compile Remove="SubPage.xaml.cs" />
   </ItemGroup>
   <ItemGroup>
