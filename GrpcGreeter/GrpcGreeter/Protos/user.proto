@@ -1,0 +1,60 @@
+syntax = "proto3";
+
+option csharp_namespace = "GrpcGreeter";
+
+package user;
+
+message User {
+    int32 id = 1;
+    string name = 3;
+    int32 age = 4;
+}
+
+service Users {
+  rpc CreateUsers (CreateUsersRequest) returns (CreateUsersReply);
+  rpc ReadUsers (ReadUsersRequest) returns (ReadUsersReply);
+  rpc ReadsUsers (ReadsUsersRequest) returns (ReadsUsersReply);
+  rpc UpdateUsers (UpdateUsersRequest) returns (UpdateUsersReply);
+  rpc DeleteUsers (DeleteUsersRequest) returns (DeleteUsersReply);
+}
+
+message CreateUsersRequest {
+  string name = 1;
+  int32 age = 2;
+}
+
+message CreateUsersReply {
+  User user = 1;
+}
+
+message ReadUsersRequest {
+  int32 user_id = 1;
+}
+
+message ReadUsersReply {
+  User user = 1;
+}
+
+message ReadsUsersRequest {
+}
+
+message ReadsUsersReply {
+  repeated User users = 1;
+}
+
+message UpdateUsersRequest {
+  int32 user_id = 1;
+  string name = 2;
+  int32 age = 3;
+}
+
+message UpdateUsersReply {
+  User user = 1;
+}
+
+message DeleteUsersRequest {
+  int32 user_id = 1;
+}
+
+message DeleteUsersReply {
+}

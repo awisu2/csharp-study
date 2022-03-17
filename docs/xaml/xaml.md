@@ -13,6 +13,15 @@
 
 - move page: `Frame.Navigate(typeof(SubPage));`
 
+## mvvm helps
+
+- ReactiveProperty
+- MVVMHelpers
+- Prism
+- MvvmCross
+- ReactiveUI
+- MVVMLite
+
 ## view samples
 
 ### ListView
