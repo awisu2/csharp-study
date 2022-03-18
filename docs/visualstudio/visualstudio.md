@@ -1,10 +1,7 @@
 # visual studio
 
-## shortsuts
-
-- breakpoint: F9
-- comment out: ctrl + k > c
-- comment reverse: ctrl + k > u
+- [プロジェクトファイル](./projectfile.md)(.csproj) は Msbuild 用設定ファイルの一つ
+- [shortcut](./shortcut.md)
 
 ## Words
 

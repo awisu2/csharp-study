@@ -4,6 +4,7 @@
 
 - [basic things](./docs/basicthings.md): So i am beginner
 - [basic codes](./HelloVisualStudioSolution/README.md)
+- [visualstudio](./docs/visualstudio/visualstudio.md): visual studio 各種諸々
 
 ## docs
 
