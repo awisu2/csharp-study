@@ -13,6 +13,11 @@
 - [about visual studio](./docs/supportVersions.md): about visual studio and shortcuts ...etc
 - [about .NET](./docs/aboutDotnet.md): about .NET. .NET has a lot of kind.
 
+## codes
+
+- [async await task](./codes/asyncAwaitTask.md)
+- [dictionary](./codes/dictionary.md)
+
 ## gui
 
 - [uno platform](./docs/unoPlatform.md)
