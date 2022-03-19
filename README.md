@@ -2,6 +2,7 @@
 
 ## basic
 
+- [about .NET](./docs/aboutDotnet.md): about .NET. .NET has a lot of kind.
 - [basic things](./docs/basicthings.md): So i am beginner
 - [basic codes](./HelloVisualStudioSolution/README.md)
 - [visualstudio](./docs/visualstudio/visualstudio.md): visual studio 各種諸々
@@ -11,7 +12,7 @@
 - [install & run](./docs/install.md)
 - [suport versions](./docs/supportVersions.md): .NET and C# versions
 - [about visual studio](./docs/supportVersions.md): about visual studio and shortcuts ...etc
-- [about .NET](./docs/aboutDotnet.md): about .NET. .NET has a lot of kind.
+- [grpc](./docs/grpc.md)
 
 ## codes
 
