@@ -12,7 +12,8 @@
 - [install & run](./docs/install.md)
 - [suport versions](./docs/supportVersions.md): .NET and C# versions
 - [about visual studio](./docs/supportVersions.md): about visual studio and shortcuts ...etc
-- [grpc](./docs/grpc.md)
+- [grpc](./docs/grpc/README.md): network access protocol like REST
+- [dotnet command](./docs/dotnet.md): can controll .NET project on CLI
 
 ## codes
 

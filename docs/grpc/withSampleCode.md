@@ -1,6 +1,4 @@
-# grpc
-
-csharp での grpc 実装に関する各種事項の調査
+# csharp での grpc 実装に関する各種事項の調査
 
 - [ASP\.NET Core で \.NET Core gRPC のクライアントとサーバーを作成する \| Microsoft Docs](https://docs.microsoft.com/ja-jp/aspnet/core/tutorials/grpc/grpc-start?view=aspnetcore-3.0&tabs=visual-studio)
 
