@@ -5,7 +5,8 @@
 - [about .NET](./docs/aboutDotnet.md): about .NET. .NET has a lot of kind.
 - [basic things](./docs/basicthings.md): So i am beginner
 - [basic codes](./HelloVisualStudioSolution/README.md)
-- [visualstudio](./docs/visualstudio/visualstudio.md): visual studio 各種諸々
+- [visualstudio](./docs/visualstudio/README.md): visual studio
+- [NuGet](./docs/visualstudio/nuget.md): .Net's package (manager)
 
 ## docs
 

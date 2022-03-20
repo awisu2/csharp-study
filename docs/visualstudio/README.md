@@ -3,6 +3,7 @@
 - [project file](./projectfile.md)(.csproj) は Msbuild 用設定ファイルの一つ
 - [shortcut](./shortcut.md)
 - [NuGet](./nuget.md)
+- [about setting files](./settingFiles.md): appsettings.json, launchSettings.json などの設定ファイルについて
 
 ## Words
 

@@ -35,6 +35,8 @@ webBuilder.UseStartup<Startup>();
 
 以下の記載を追記することで、_0.0.0.0/80_ で Listen させることができた。
 
+[appsettings.json, launchSettings.json](../visualstudio/settingFiles.md) で指定することも可能
+
 ```cs
 webBuilder.ConfigureKestrel(options =>
 {
@@ -51,13 +53,6 @@ Note
 - [Kestrel](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/servers/?view=aspnetcore-6.0&tabs=windows#kestrel): default HTTP server で、cross-platform 対応
   - [Kestrel over view](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/servers/kestrel?view=aspnetcore-6.0)
   - [Kestrel vs\. HTTP\.sys](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/servers/?view=aspnetcore-6.0&tabs=windows#korh): nginx, abache, IIS などを噛ませた場合との対比
-- [] port の変更が不安定: デバッグモードだと、_appsettings.json_ や _launchSettings.json_ 内に記載した host や port を元に Listen されるのだが、Publish すると、この設定が効かず、上記のように Host に直接設定する必要があった
-  - [] appsettings.json とは
-    - [既定の builder 設定](https://docs.microsoft.com/ja-jp/aspnet/core/fundamentals/host/generic-host?view=aspnetcore-5.0#default-builder-settings-1)
-    - Host の`CreateDefaultBuilder()` にて読み込まれる設定ファイル
-    - 環境別の設定が有効なようで、_appsettings.{Environment}.json_ の読み込みも行われるっぽい
-  - [] launchSettings.json とは
-    - [開発と launchSettings\.json](https://docs.microsoft.com/ja-jp/aspnet/core/fundamentals/environments?view=aspnetcore-3.1#development-and-launchsettingsjson-1)
 - [] ConfigureWebHostDefaults で可能な他の設定
 
 #### Startuup.cs
