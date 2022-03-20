@@ -1,7 +1,8 @@
 # visual studio
 
-- [プロジェクトファイル](./projectfile.md)(.csproj) は Msbuild 用設定ファイルの一つ
+- [project file](./projectfile.md)(.csproj) は Msbuild 用設定ファイルの一つ
 - [shortcut](./shortcut.md)
+- [NuGet](./nuget.md)
 
 ## Words
 

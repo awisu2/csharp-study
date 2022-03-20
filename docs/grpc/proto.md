@@ -3,11 +3,11 @@
 - [proto ファイル](https://docs.microsoft.com/ja-jp/aspnet/core/grpc/basics?view=aspnetcore-6.0#proto-file)
 - [Protocol Buffers  \|  Google Developers](https://developers.google.com/protocol-buffers)
 
-gRpc のプロトコル設定ファイル。これを元に各言語は Inteface や実コードを生成する
+gRpc のプロトコル設定ファイル(**Protobuf**)。これを元に各言語は Inteface や実コードを生成する
 
 ## basic
 
-- csharp のドキュメント上では **Protobuf** となっている
+- **Protobuf** と呼ばれる
 - [Grpc\.Tools](https://www.nuget.org/packages/Grpc.Tools/) が必要
   - サーバプロジェクトの場合、_Grpc.AspNetCore メタパッケージには、Grpc.Tools への参照が含まれます_ とのことなので、以下の記載をプロジェクトファイルに追加で良いらしい
     - `<PackageReference Include="Grpc.AspNetCore" Version="2.32.0" />`
@@ -16,6 +16,7 @@ gRpc のプロトコル設定ファイル。これを元に各言語は Inteface
 - プロジェクトに追加されないか、ソース管理にチェックインされません
 - obj ディレクトリに格納されるビルド成果物です
   - なので proto を書いたら一回ビルドすると補完が効く
+- [visual studio 上でのファイル指定](./gettingStart.md)
 
 ## コード生成
 
