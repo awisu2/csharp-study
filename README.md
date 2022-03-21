@@ -17,6 +17,12 @@
 - [dotnet command](./docs/dotnet.md): can controll .NET project on CLI
 - [unittest](./docs/unittest.md)
 
+### ASP.NET
+
+- [about ASP\.NET Core](https://docs.microsoft.com/ja-jp/aspnet/core/ntroduction-to-aspnet-core?view=aspnetcore-6.0)
+- [Kestrel](https://docs.microsoft.com/ja-jp/aspnet/core/fundamentals/servers/kestrel?view=aspnetcore-6.0): ASP.NET Core's web server
+  - [AspNetCore\.Docs/kestrel\.md at main · dotnet/AspNetCore\.Docs](https://github.com/dotnet/AspNetCore.Docs/blob/main/aspnetcore/fundamentals/servers/kestrel.md): Kestrel についての説明ではあるが、Microsoft サイト では記載のない appsettings.json での設定項目が載っている(まとまっていないので要調査)
+
 ## codes
 
 - [async await task](./codes/asyncAwaitTask.md)
