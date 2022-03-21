@@ -4,6 +4,7 @@
 - [shortcut](./shortcut.md)
 - [NuGet](./nuget.md)
 - [about setting files](./settingFiles.md): appsettings.json, launchSettings.json などの設定ファイルについて
+- [secret parameters](./usersecret.md): コミットできないような値の管理について. 環境変数, user secrets
 
 ## Words
 
