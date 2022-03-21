@@ -2,7 +2,9 @@
 
 ## basic
 
+- [about C\#](./docs/aboutCsharp.md)
 - [about .NET](./docs/aboutDotnet.md): about .NET. .NET has a lot of kind.
+  - [suport versions](./docs/supportVersions.md): .NET and C# versions
 - [basic things](./docs/basicthings.md): So i am beginner
 - [basic codes](./HelloVisualStudioSolution/README.md)
 - [visualstudio](./docs/visualstudio/README.md): visual studio
@@ -11,11 +13,9 @@
 ## docs
 
 - [install & run](./docs/install.md)
-- [suport versions](./docs/supportVersions.md): .NET and C# versions
-- [about visual studio](./docs/supportVersions.md): about visual studio and shortcuts ...etc
-- [grpc](./docs/grpc/README.md): network access protocol like REST
 - [dotnet command](./docs/dotnet.md): can controll .NET project on CLI
-- [unittest](./docs/unittest.md)
+- [about visual studio](./docs/supportVersions.md): about visual studio and shortcuts ...etc
+- [Mono](https://www.mono-project.com/docs/)
 
 ### ASP.NET
 
@@ -26,7 +26,9 @@
 ## codes
 
 - [async await task](./codes/asyncAwaitTask.md)
-- [dictionary](./codes/dictionary.md)
+- [dictionary](./codes/dictionary.md): type of the dictionay
+- [grpc](./docs/grpc/README.md): network access protocol like REST
+- [unittest](./docs/unittest.md)
 
 ## gui
 

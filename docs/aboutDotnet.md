@@ -2,6 +2,7 @@
 
 - [いろいろな種類がある \.NET の違いとは \- Synamon’s Engineer blog](https://synamon.hatenablog.com/entry/2021/10/18/190000)
 - [\.NET の派生を理解する](https://www.infoq.com/jp/articles/varieties-dotnet/)
+- [対応バージョン](./supportVersions.md)
 
 ## .NET 分類
 
