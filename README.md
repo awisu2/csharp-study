@@ -16,6 +16,8 @@
 - [dotnet command](./docs/dotnet.md): can controll .NET project on CLI
 - [about visual studio](./docs/supportVersions.md): about visual studio and shortcuts ...etc
 - [Mono](https://www.mono-project.com/docs/)
+- [about xxx.config](./docs/appConfig.md): App.config など アプリケーション設定と呼ばれる アプリ設定について
+  - [] 他にも usesetting.json, web.config などがある
 
 ### ASP.NET
 
@@ -29,6 +31,10 @@
 - [dictionary](./codes/dictionary.md): type of the dictionay
 - [grpc](./docs/grpc/README.md): network access protocol like REST
 - [unittest](./docs/unittest.md)
+
+### db
+
+- [ADO, ADO.NET, LINQ](./docs/ado/README.md)
 
 ## gui
 
