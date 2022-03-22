@@ -22,7 +22,13 @@
 
 - [] LINQ
 
-## sample code
+## sqlite sample code
+
+1. create connection
+2. open connection
+3. run coomand
+
+- need NuGet `System.Data.SQLite`
 
 ```csharp
 using System;
@@ -34,35 +40,49 @@ namespace ADOSqlite
     {
         public void AccessSample()
         {
+            // builder of string for SQLiteConnection
             SQLiteConnectionStringBuilder builder = new SQLiteConnectionStringBuilder();
 
+            // connection setting
             var decktop = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory);
             builder.DataSource = @$"{decktop}\user.sqlite";
 
+            // connection db
             using (var con = new SQLiteConnection(builder.ConnectionString))
             {
-                con.Open();
-
-                using (var cmd = con.CreateCommand())
+                try
                 {
-                    cmd.CommandText = @"CREATE TABLE IF NOT EXISTS user (id INTEGER PRIMARY KEY, name TEXT);";
-                    cmd.ExecuteNonQuery();
+                    con.Open();
 
-                    cmd.CommandText = @"INSERT INTO user(name) values ('jondo')";
-                    cmd.ExecuteNonQuery();
-
-                    cmd.CommandText = @"select * from user;";
-                    using (var reader = cmd.ExecuteReader())
+                    using (var cmd = con.CreateCommand())
                     {
-                        while(reader.Read())
+                        // create
+                        cmd.CommandText = @"CREATE TABLE IF NOT EXISTS user (id INTEGER PRIMARY KEY, name TEXT);";
+                        cmd.ExecuteNonQuery();
+
+                        // insert
+                        cmd.CommandText = @"INSERT INTO user(name) values ('jondo')";
+                        cmd.ExecuteNonQuery();
+
+                        // select
+                        cmd.CommandText = @"select * from user;";
+                        using (var reader = cmd.ExecuteReader())
                         {
-                            Console.WriteLine($"{reader["id"]}: {reader["name"]}");
+                            while (reader.Read())
+                            {
+                                // access column name or index
+                                Console.WriteLine($"{reader[0]}: {reader["name"]}");
+                            }
                         }
                     }
+
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
                 }
             }
         }
     }
 }
-
 ```
