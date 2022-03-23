@@ -21,70 +21,18 @@
 
 ## NOTE
 
-- sample code. write later
+- sample code. (write later)
 - connection
+- [executes](./executes.md): ExecuteReader, ExecuteNonQuery など
+- [DataReader](./dataReader.md)
 
-## sqlite sample code
+## 順番に理解する
 
-1. create connection
-2. open connection
-3. run coomand
+1. [basic sample](./basicSample.md): how to use first ADO
+2. [what execute?](./executes.md)
+3. [DataReader](./dataReader.md): read datas and scheme
+4. [DataAdapter, DataSet](./dataAdapter_DataSet.md): DataAdapter is accsess supporter, DataSet is Adapter's Data instance
+   - DB の扱いが少し簡単になり、リレーションなどが可能になる
+   - 独特の記述が必要
 
-- need NuGet `System.Data.SQLite`
-
-```csharp
-using System;
-using System.Data.SQLite;
-
-namespace ADOSqlite
-{
-    internal class SqliteSample
-    {
-        public void AccessSample()
-        {
-            // builder of string for SQLiteConnection
-            SQLiteConnectionStringBuilder builder = new SQLiteConnectionStringBuilder();
-
-            // connection setting
-            var decktop = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory);
-            builder.DataSource = @$"{decktop}\user.sqlite";
-
-            // connection db
-            using (var con = new SQLiteConnection(builder.ConnectionString))
-            {
-                try
-                {
-                    con.Open();
-
-                    using (var cmd = con.CreateCommand())
-                    {
-                        // create
-                        cmd.CommandText = @"CREATE TABLE IF NOT EXISTS user (id INTEGER PRIMARY KEY, name TEXT);";
-                        cmd.ExecuteNonQuery();
-
-                        // insert
-                        cmd.CommandText = @"INSERT INTO user(name) values ('jondo')";
-                        cmd.ExecuteNonQuery();
-
-                        // select
-                        cmd.CommandText = @"select * from user;";
-                        using (var reader = cmd.ExecuteReader())
-                        {
-                            while (reader.Read())
-                            {
-                                // access column name or index
-                                Console.WriteLine($"{reader[0]}: {reader["name"]}");
-                            }
-                        }
-                    }
-
-                }
-                catch (Exception ex)
-                {
-                    Console.WriteLine(ex.Message);
-                }
-            }
-        }
-    }
-}
-```
+- [] command builder
