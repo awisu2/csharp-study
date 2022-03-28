@@ -39,8 +39,13 @@
 
 ## gui
 
-- [uno platform](./docs/unoPlatform.md)
+- [uno platform](./docs/unoPlatform.md): multiplatform
 - [xaml](./docs/xaml/xaml.md): xaml with uwp and c#
+
+## webassembly
+
+- [uno platform](./docs/unoPlatform.md): multiplatform
+- [blazor](./brazor/README.md)
 
 ## Words
 
