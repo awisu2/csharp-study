@@ -12,3 +12,4 @@
 ## docs
 
 - [allow no trust ssl on Client](./allowNoTrustSslOnClient.md)
+- [ASP\.NET Core のための gRPC での認証と承認 \| Microsoft Docs](https://docs.microsoft.com/ja-jp/aspnet/core/grpc/authn-and-authz?view=aspnetcore-6.0)
