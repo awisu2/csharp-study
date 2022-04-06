@@ -40,8 +40,8 @@
 ---
 
 - `broadFileSystemAccess` を manifest に指定することで、アクセス時のユーザと同等のアクセス権が可能とのこと
-  - 動作がよくわからなかった
-  - マイピクチャへのアクセス(`pictureLibrary`)が許可されるわけでもなかった
+  - [アクセス権をチェックするサンプル](./sampleCheckpermission.md)
+  - 2018 年からデフォルト disable になったとのこと [c\# \- broadFileSystemAccess for UWP not working \- Stack Overflow](https://stackoverflow.com/questions/59802498/broadfilesystemaccess-for-uwp-not-working)
 - `picturesLibrary` の動作を確認
   - `broadFileSystemAccess`がなくてもアクセスできた
 - 最後に windows 自体の設定でアクセス権を設定する必要あり
