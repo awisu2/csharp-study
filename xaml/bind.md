@@ -30,8 +30,6 @@ but this usage first time showing only. can't update.
 public sealed partial class MainPage : Page
 {
     private string hello = "hello world";
-
-    public RecordingViewModel ViewModel { get; set; }
 }
 ```
 

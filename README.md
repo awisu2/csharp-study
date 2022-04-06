@@ -33,6 +33,14 @@
 - [grpc](./docs/grpc/README.md): network access protocol like REST
 - [unittest](./docs/unittest.md)
 
+## files
+
+- [files](./files/README.md): ファイルへのアクセスとその制限
+
+## xaml
+
+- [images](./images/README.md): uwp で画像を表示する
+
 ### db
 
 - [ADO, ADO.NET, LINQ](./docs/ado/README.md)
@@ -40,7 +48,7 @@
 ## gui
 
 - [uno platform](./docs/unoPlatform.md): multiplatform
-- [xaml](./docs/xaml/xaml.md): xaml with uwp and c#
+- [xaml](./xaml/README.md): xaml with uwp and c#
 
 ## webassembly
 
