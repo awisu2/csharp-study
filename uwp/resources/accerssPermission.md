@@ -27,3 +27,11 @@
     - android の permission とにている
   - [ファイルとフォルダーへのアクセスの保持](https://docs.microsoft.com/ja-jp/windows/uwp/files/file-access-permissions#retaining-access-to-files-and-folders)
     - 何らかの方法でアクセスを許可した対象の許可状態を永続化する
+
+### 失敗
+
+- `broadFileSystemAccess` を manifest に指定することで、アクセス時のユーザと同等のアクセス権が可能とのこと
+  - [windows runtime \- broadFileSystemAccess UWP \- Stack Overflow](https://stackoverflow.com/questions/50559764/broadfilesystemaccess-uwp)
+  - [Windows 10 の UWP アプリ、ユーザーの承認なくファイルシステムへのアクセスが許可されるバグ \| スラド セキュリティ](https://security.srad.jp/story/18/11/03/0018224/)
+
+やっってみて、自分で許可を出してみたがうまくいかず。。。
