@@ -3,6 +3,7 @@
 - [images](./images/README.md)
   - [show images](./images/showImages.md)
 - [resources](./resources/README.md): 単に何らかのリソースを扱う際のまとめ(画像など特定カテゴリは分ける)
+  - [windows での各種アクセス許可画面の表示](./launchPermissionSetting.md)
 - [button](./button/README.md)
 - コードから xaml にアクセスする: `x:Name="Foo"` と付与することで、コード内から`Foo.Context` のようにアクセス可能
   - [] もう少し詳細な調査
