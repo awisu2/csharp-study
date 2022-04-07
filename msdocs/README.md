@@ -18,7 +18,6 @@
     - [Windows アプリ](https://docs.microsoft.com/ja-jp/windows/apps/)
       - [Windows 用のデスクトップ アプリの作成](https://docs.microsoft.com/ja-jp/windows/apps/desktop/)
         - [Windows UI Library \(WinUI\) \- Windows apps \| Microsoft Docs](https://docs.microsoft.com/en-us/windows/apps/winui/)
-        - Github: [microsoft/Xaml\-Controls\-Gallery at winui3](https://github.com/microsoft/Xaml-Controls-Gallery/tree/winui3)
       - [UWP (Universal Windows Platform) documentation](https://docs.microsoft.com/en-us/windows/uwp/?view=winrt-22000)
     - [Windows ハードウェア](https://docs.microsoft.com/ja-jp/windows-hardware/drivers/)
       - [Windows Driver Kit \(WDK\) のダウンロード](https://docs.microsoft.com/ja-jp/windows-hardware/drivers/download-the-wdk)
@@ -35,3 +34,9 @@
   - [c\# Namespaces](./csharpNamespases.md)
 - [ASP\.Net](./aspnet.md)
   - [vs ASP\.NET and ASP\.NET Core](./vsAspnet.md)
+- Uwp
+  - [ファイルの操作](https://docs.microsoft.com/ja-jp/windows/uwp/get-started/fileio-learning-track)
+- Xaml
+  - [デザイン概要](https://docs.microsoft.com/ja-jp/windows/apps/design/)
+    - [XAML でのレスポンシブ レイアウト \- Windows apps \| Microsoft Docs](https://docs.microsoft.com/ja-jp/windows/apps/design/layout/layouts-with-xaml)
+  - Github: [microsoft/Xaml\-Controls\-Gallery at winui3](https://github.com/microsoft/Xaml-Controls-Gallery/tree/winui3)
