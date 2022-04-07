@@ -18,6 +18,7 @@
 - [Mono](https://www.mono-project.com/docs/)
 - [about xxx.config](./docs/appConfig.md): App.config など アプリケーション設定と呼ばれる アプリ設定について
   - [] 他にも usesetting.json, web.config などがある
+- [microsoft documents](./docs/msdocs.md): microsoft のドキュメントを整頓して理解をしやすくする
 
 ### ASP.NET
 
