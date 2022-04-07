@@ -32,5 +32,6 @@
 ## relation pages
 
 - [C\#](./csharp.md)
+  - [c\# Namespaces](./csharpNamespases.md)
 - [ASP\.Net](./aspnet.md)
   - [vs ASP\.NET and ASP\.NET Core](./vsAspnet.md)
