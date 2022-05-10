@@ -19,6 +19,7 @@
 - [about xxx.config](./docs/appConfig.md): App.config など アプリケーション設定と呼ばれる アプリ設定について
   - [] 他にも usesetting.json, web.config などがある
 - [microsoft documents](./msdocs/README.md): microsoft のドキュメントを整頓して理解をしやすくする
+- [shared project](./docs/sharedProject.md): コードの共有用プロジェクトの作成方法
 
 ### ASP.NET
 
