@@ -39,9 +39,6 @@
 
 ---
 
-- プロジェクトの "Package.appxmanifest" を編集することで設定可能
-  - [サンプルコード](https://docs.microsoft.com/en-us/windows/uwp/files/file-access-permissions#example)
-    - `xmlns:rescap` の指定も必用なので気をつける
 - `broadFileSystemAccess` を manifest に指定することで、アクセス時のユーザと同等のアクセス権が可能とのこと
   - [アクセス権をチェックするサンプル](./sampleCheckpermission.md)
   - 2018 年からデフォルト disable になったとのこと [c\# \- broadFileSystemAccess for UWP not working \- Stack Overflow](https://stackoverflow.com/questions/59802498/broadfilesystemaccess-for-uwp-not-working)
@@ -50,7 +47,9 @@
 - 最後に windows 自体の設定でアクセス権を設定する必要あり
   - windows \> 設定 \> プライバシー \> {左カラムの各種対象}
 
-### マイピクチャ(+その以外)へのアクセス権とアクセス例
+### ファイルシステム、マイピクチャ(+その以外)へのアクセス権とアクセス例
+
+- [サンプルコード](https://docs.microsoft.com/en-us/windows/uwp/files/file-access-permissions#example)
 
 Package.appxmanifest へ設定を追加
 
@@ -58,6 +57,7 @@ Package.appxmanifest へ設定を追加
 2. `<Package>` の `IgnorableNamespaces` に "rescap" を追加
 3. `<Capabilities>` に `<rescap:Capability Name="picturesLibrary" />` の用な感じで必要な設定を追加
    - Name="picturesLibrary" のところを差し替えれば、ほか設定も可能
+4. ただし、ユーザが許可を出す必要がある win > 設定 > プライバシー > ファイルシステム or ピクチャ で、on/off が可能
 
 ```xml
 <Package
@@ -97,7 +97,6 @@ private async void LoadFromPicture()
             break;
         }
     }
-
 
     using (var s = await file.OpenReadAsync())
     {
