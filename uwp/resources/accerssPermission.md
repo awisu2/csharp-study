@@ -39,6 +39,9 @@
 
 ---
 
+- プロジェクトの "Package.appxmanifest" を編集することで設定可能
+  - [サンプルコード](https://docs.microsoft.com/en-us/windows/uwp/files/file-access-permissions#example)
+    - `xmlns:rescap` の指定も必用なので気をつける
 - `broadFileSystemAccess` を manifest に指定することで、アクセス時のユーザと同等のアクセス権が可能とのこと
   - [アクセス権をチェックするサンプル](./sampleCheckpermission.md)
   - 2018 年からデフォルト disable になったとのこと [c\# \- broadFileSystemAccess for UWP not working \- Stack Overflow](https://stackoverflow.com/questions/59802498/broadfilesystemaccess-for-uwp-not-working)
