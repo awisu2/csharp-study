@@ -69,6 +69,7 @@ Package.appxmanifest へ設定を追加
   ...
   <Capabilities>
     ...
+    <rescap:Capability Name="broadFileSystemAccess" />
     <rescap:Capability Name="picturesLibrary" />
   </Capabilities>
   ...
@@ -78,10 +79,18 @@ Package.appxmanifest へ設定を追加
 samplecode
 
 ```cs
+using Windows.UI.Xaml.Media.Imaging;
+
 private async void LoadFromPicture()
 {
+    // マイピクチャから取得
     var myPictures = await Windows.Storage.StorageLibrary.GetLibraryAsync(Windows.Storage.KnownLibraryId.Pictures);
     var folder = myPictures.SaveFolder;
+
+    // 指定したフォルダから取得
+    var fPash = @"{anyfolder}";
+    var folder = await Windows.Storage.StorageFolder.GetFolderFromPathAsync(fPash);
+
 
     var files = await folder.GetFilesAsync();
     if (files.Count <= 0)
