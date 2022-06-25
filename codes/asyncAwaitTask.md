@@ -9,6 +9,9 @@
 コマンドラインなどで、非同期を呼び出しつつ待機する方法
 
 ```cs
+using System;
+using System.Threading.Tasks;
+
 namespace HelloVisualStudio;
 
 class Program
