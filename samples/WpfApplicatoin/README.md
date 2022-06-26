@@ -5,19 +5,25 @@
 ---
 
 - uwp との違い
-  - Permission制限がない
-  　　- ImageのSourceも単にSourceを指定するだけでOK
+  - Permission 制限がない
+    　　- Image の Source も単に Source を指定するだけで OK
 - デバッグ出力: `DEbug.Print();` Immediate Windows で表示される (`using System.Diagnostics;`)
-- xamlのデフォルト位置設定: Top, Center, Stretch っぽい
+- xaml のデフォルト位置設定: Top, Center, Stretch っぽい
 
 ## xaml
 
 - ボタンをテキストに合わせたサイズにする: "HorizontalAlignment" を指定 (default = Stretch)
   - `<Button Click="OnClickGotoUISample" Content="hoge" HorizontalAlignment="Left" />`
-- style: 別途Styleを指定しておき呼び出せる (サンプルは後述)
-  - Window.Resources 内で宣言し、TargetTypeを指定
+- style: 別途 Style を指定しておき呼び出せる (サンプルは後述)
+  - Window.Resources 内で宣言し、TargetType を指定
   - x:Key で DynamicRecouce から指定できる
-
+- window, Page, UserControl = window: 独立して表示可能, Page: Window 内での遷移先, UserControl: カスタム UI(Window 内に設置)
+  - [C\# WPF Window,Page,UserControl の違い \- Qiita](https://qiita.com/nie/items/3e2f6f37b3425585952b)
+- 画面遷移:
+  - [WPF と Visual Studio で画面遷移を実装する方法 \| \.NET コラム](https://www.fenet.jp/dotnet/column/environment/4951/)
+  - まず Frame を設定して、その中でページを表示/遷移するのが基本
+  - page 遷移: `NavigationService.Navigate(new SubPage());`
+  - window 遷移: `new SubWindow().Show();`
 
 ## samples
 

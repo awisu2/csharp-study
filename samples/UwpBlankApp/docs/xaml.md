@@ -1,6 +1,6 @@
 # xaml basics
 
-- topタグで挙動が変わる: Application, Page, TabbedPage, ResourceDictionary, ContentPage, FlyoutPage など
+- top タグで挙動が変わる: Application, Page, TabbedPage, ResourceDictionary, ContentPage, FlyoutPage など
   - 通常は Page か ContentPage かな
 
 ## code samples
@@ -22,7 +22,7 @@
 ```
 
 - Margin, Padding: 左 上 右 下 の順で設定される。
-  - 設定数により挙動が変わる = 1つ: 全方向, 2つ: 左右、上下, ４つ: 各方向
+  - 設定数により挙動が変わる = 1 つ: 全方向, 2 つ: 左右、上下, ４つ: 各方向
 - Image: プロジェクト内の画像であれば簡単に表示できる
 - `x:Name`: でプログラムからコンポーネントにアクセスできる
 
@@ -31,7 +31,7 @@
 ### ボタンクリックイベント + 画面移動
 
 ```cs
-    void OnClickGotoUISample(object sender, RoutedEventArgs e)
+    void OnClick(object sender, RoutedEventArgs e)
     {
         this.Frame.Navigate(typeof(OtherPage));
     }
@@ -44,7 +44,7 @@
 ### テキストボックス
 
 - 変更後の値が取得できる
-- textをinspectorで見るとエスケープ文字が付与されているが、気にしなくて良い
+- text を inspector で見るとエスケープ文字が付与されているが、気にしなくて良い
   - 表示するための便宜上の処理のため実際には付与されていない
 
 ```cs
@@ -64,8 +64,8 @@
 
 ---
 
-- Gridは、Grid.RowDefinitions、Grid.ColumnDefinitions で個別設定をする
-  - Height, Width = Auto: 内部コンテンツに合わせる, *: 残りの幅を埋める
+- Grid は、Grid.RowDefinitions、Grid.ColumnDefinitions で個別設定をする
+  - Height, Width = Auto: 内部コンテンツに合わせる, \*: 残りの幅を埋める
     - `*` は `2*` などと割合を決めることも可能
 - `Grid.Row="2" Grid.Column="3"` などを各コンテンツにセットすることで対象場所を指定できる
 
