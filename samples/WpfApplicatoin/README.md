@@ -7,8 +7,21 @@
 - uwp との違い
   - Permission 制限がない
     　　- Image の Source も単に Source を指定するだけで OK
+  - x:Bind がない
 - デバッグ出力: `DEbug.Print();` Immediate Windows で表示される (`using System.Diagnostics;`)
 - xaml のデフォルト位置設定: Top, Center, Stretch っぽい
+- binding:
+  - links
+    - [第 5 回　 WPF の「データ・バインディング」を理解する：連載：WPF 入門（1/3 ページ） \- ＠IT](https://atmarkit.itmedia.co.jp/ait/articles/1010/08/news123.html)
+    - [方法: TextBox テキストでソースを更新するタイミングを制御する \- WPF \.NET Framework \| Microsoft Docs](https://docs.microsoft.com/ja-jp/dotnet/desktop/wpf/data/how-to-control-when-the-textbox-text-updates-the-source?view=netframeworkdesktop-4.8)
+  - samplecode
+    - [WPF\-Samples/Sample Applications/DataBindingDemo at master · microsoft/WPF\-Samples](https://github.com/microsoft/WPF-Samples/tree/master/Sample%20Applications/DataBindingDemo)
+  - 成功例:
+    1. `INotifyPropertyChanged` で通知可能なインスタンスを生成
+    2. Page 内で `DataContext` に インスタンスをセット
+    3. xaml 内で `{Binding {property}}` でアクセスできる
+    4. 更新を反映させるには `Mode=TwoWay, UpdateSourceTrigger=PropertyChanged` を指定する必要がある
+       - 受信側(TextBlock など) の Mode を指定する必要はない
 
 ## xaml
 
@@ -41,3 +54,10 @@
         </StackPanel>
     </Grid>
 ```
+
+## binding のイマイチよくわからない挙動
+
+- DataContext に無名クラスをセットすると表示されるが、単純なクラスの場合 public でも反映されない
+  - ok: `DataContext = new { MyText = "mytext" };`
+  - ng: `DataContext = new SampleData();`
+  - ok: INotifyPropertyChanged を継承したクラス

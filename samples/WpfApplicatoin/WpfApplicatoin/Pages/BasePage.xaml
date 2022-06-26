@@ -13,6 +13,7 @@
             <TextBlock Text="BasePage"></TextBlock>
             <Button Click="OnClick">goto subPage</Button>
             <Button Click="OnClickShowSubWindow">show subwindow</Button>
+            <Button Click="OnClickGotoSyncValuesPage">goto sync values</Button>
         </StackPanel>
         
     </Grid>

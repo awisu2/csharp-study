@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -12,30 +14,20 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using WpfApplicatoin.Windows;
 
 namespace WpfApplicatoin.Pages
 {
     /// <summary>
-    /// Interaction logic for BasePage.xaml
+    /// Interaction logic for SyncValuesSubPage.xaml
     /// </summary>
-    public partial class BasePage : Page
+    public partial class SyncValuesSubPage : Page
     {
-        public BasePage()
+        public SyncValuesSubPage()
         {
             InitializeComponent();
+            DataContext = MyViewModel.Instance;
         }
-        void OnClick(object sender, RoutedEventArgs e)
-        {
-            NavigationService.Navigate(new SubPage());
-        }
-
-        void OnClickShowSubWindow(object sender, RoutedEventArgs e)
-        {
-            new SubWindow().Show();
-        }
-
-        void OnClickGotoSyncValuesPage(object sender, RoutedEventArgs e)
+        void OnClickGotoFrontPage(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new SyncValuesPage());
         }

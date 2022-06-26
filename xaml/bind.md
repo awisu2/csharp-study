@@ -51,33 +51,36 @@ using System.Runtime.CompilerServices; // CallerMemberName
 
 namespace HelloUnoPlatform.Models
 {
-    public class HelloINotifyPropertyChanged : INotifyPropertyChanged
+    public class MyViewModel : INotifyPropertyChanged
     {
-        // 通知インスタンス
+        // notification instance & function
         public event PropertyChangedEventHandler PropertyChanged;
-
-        // 通知関数
         private void NotifyPropertyChanged([CallerMemberName] String propertyName = "")
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-            }
-        }
+            => PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         // ここまではおまじない ----------
 
-        // string hello
-        private string hello = string.Empty;
-        public string Hello
+        // We can share Data on multi page with Singleton pattern
+        private static MyViewModel _instance = new MyViewModel();
+        public static MyViewModel Instance
         {
-            get { return hello; }
+            get
+            {
+                return _instance;
+            }
+        }
+        private MyViewModel() { }
+
+        // any properties
+        private string _mytext = string.Empty;
+        public string MyText
+        {
+            get { return _mytext; }
             set
             {
-                if (value != this.hello)
-                {
-                    this.hello = value;
-                    NotifyPropertyChanged();
-                }
+                if (value == this._mytext) return;
+
+                this._mytext = value;
+                NotifyPropertyChanged();
             }
         }
     }
@@ -97,7 +100,7 @@ namespace HelloUnoPlatform
 {
     public sealed partial class MainPage : Page
     {
-        public HelloINotifyPropertyChanged hello = new HelloINotifyPropertyChanged();
+        public MyViewModel hello = new MyViewModel();
 
         public MainPage()
         {
