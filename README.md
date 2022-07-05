@@ -9,6 +9,7 @@
 - [basic codes](./HelloVisualStudioSolution/README.md)
 - [visualstudio](./docs/visualstudio/README.md): visual studio
 - [NuGet](./docs/visualstudio/nuget.md): .Net's package (manager)
+- run on web: [C\# Online Compiler \| \.NET Fiddle](https://dotnetfiddle.net/)
 
 ## docs
 
