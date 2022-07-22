@@ -1,8 +1,13 @@
 # dotnet commands
 
-.NET をインストールすると同時に利用できるようになる
-
-.NET プロジェクト関係の処理をコマンドラインから実行可能
+- .NET をインストールすると同時に利用できるようになる
+- .NET プロジェクト関係の処理をコマンドラインから実行可能
+- change dotnet default version under spesific folder
+  - [How to Change Default DotNet SDK Version \- DEV Community](https://dev.to/polarbit/how-to-change-default-dotnet-sdk-version-43ph#:~:text=In%20order%20to%20change%20default,cli%20command%20dotnet%20new%20globaljson%20.)
+  - 1. basicaly `dotnet --version` is show latest versions that installed in your pc
+  - 2. create global.json by `dotnet new globaljson` ("globaljson" is template name)
+  - 3. edit version in to global.json. useable version can show by `dotnet --list-runtimes`
+  - 4. your dotnet version change. please check by `dotnet --version`
 
 ## help
 

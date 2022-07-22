@@ -14,7 +14,7 @@
 ## docs
 
 - [install & run](./docs/install.md)
-- [dotnet command](./docs/dotnet.md): can controll .NET project on CLI
+- [dotnet command](./docs/dotnet.md): can controll .NET project on CLI, change current version
 - [about visual studio](./docs/supportVersions.md): about visual studio and shortcuts ...etc
 - [Mono](https://www.mono-project.com/docs/)
 - [about xxx.config](./docs/appConfig.md): App.config など アプリケーション設定と呼ばれる アプリ設定について
